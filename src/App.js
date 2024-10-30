@@ -11,7 +11,7 @@ function getRandomItems(array, count) {
 }
 
 function App() {
-  const quiz = getRandomItems(quizItems, 10);
+  const [quiz, setQuiz] = useState(getRandomItems(quizItems, 10));
   const [answers, setAnswers] = useState([]);
   const [quizIndex, setQuizIndex] = useState(0);
   const answered = answers[quizIndex] != null;
@@ -29,6 +29,7 @@ function App() {
   const reset = () => {
     setAnswers([]);
     setQuizIndex(0);
+    setQuiz(getRandomItems(quizItems, 10));
   };
   
   return (

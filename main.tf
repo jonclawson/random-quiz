@@ -17,7 +17,7 @@ resource "azurerm_resource_group" "rg" {
 }
 
 resource "azurerm_static_web_app" "web" {
-  name                = "random-quiz-app-jc-az-900"
+  name                = "quiz-app"
   resource_group_name = azurerm_resource_group.rg.name
   location           = azurerm_resource_group.rg.location
 }

@@ -1,4 +1,23 @@
 # random-quiz
+![](preview.png)
+
+Study for the AZ-900 or replace the questions in your current quiz.js file.
+
+replace the questions in this form.
+
+```
+{
+    "question": "You need to deploy a virtual machine (VM) to Azure. Which of the following options should you use to ensure that the VM is highly available?",
+    "options": [
+      "Deploy the VM to a single availability zone.",
+      "Deploy the VM to a single resource group.",
+      "Deploy the VM to a scale set.",
+      "Deploy the VM to multiple regions."
+    ],
+    "answerIndex": 2,
+    "explanation": "Deploying a VM to a scale set ensures high availability by automatically distributing the VMs across multiple fault domains and update domains within a single region."
+}
+  ```
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

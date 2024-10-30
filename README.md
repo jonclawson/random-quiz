@@ -3,7 +3,7 @@
 
 Study for the AZ-900 or replace the questions in your current quiz.js file.
 
-replace the questions in this form.
+replace the questions in this format.
 
 ```
 {

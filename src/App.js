@@ -2,8 +2,15 @@ import { useState } from 'react';
 import './App.css';
 import Question from './Question';
 import Navigation from './Navigation';
-import quizItems from './quiz';
+import TopNav from './TopNav';
+import quizItemsAz900 from './quiz';
+import quizItemsSc300 from './quiz-sc300';
 import Summary from './Summary';
+
+const quizData = {
+  'AZ 900': quizItemsAz900,
+  'SC 300': quizItemsSc300
+}
 
 function getRandomItems(array, count) {
   const shuffled = [...array].sort(() => 0.5 - Math.random());
@@ -11,6 +18,8 @@ function getRandomItems(array, count) {
 }
 
 function App() {
+  const [title, setTitle] = useState('AZ 900')
+  const [quizItems, setQuizItems] = useState(quizItemsAz900)
   const [quiz, setQuiz] = useState(getRandomItems(quizItems, 10));
   const [answers, setAnswers] = useState([]);
   const [quizIndex, setQuizIndex] = useState(0);
@@ -31,10 +40,17 @@ function App() {
     setQuizIndex(0);
     setQuiz(getRandomItems(quizItems, 10));
   };
+
+  const chooseQuiz = (name) => {
+    setTitle(name);
+    setQuizItems(quizData[name]);
+    reset();
+  }
   
   return (
     <div key={quizIndex} className="App">
-      <h1>AZ-900 Prep Exam</h1>
+      <TopNav navigate={chooseQuiz}/>
+      <h1>{title} Prep Exam</h1>
      <Question 
      key={quizIndex}
      item={quiz[quizIndex]}

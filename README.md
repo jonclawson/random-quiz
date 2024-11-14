@@ -1,7 +1,11 @@
 # random-quiz
 ![](preview.png)
 
-Study for the AZ-900 or replace the questions in your current quiz.js file.
+Study for the AZ-900, SC-300 or add your own quiz.
+
+You replace the questions in your current quiz.js files
+
+And you can extend by adding your own quiz.js files.
 
 replace the questions in this format.
 

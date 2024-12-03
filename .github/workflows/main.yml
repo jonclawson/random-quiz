@@ -29,11 +29,11 @@ jobs:
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-    - name: Terraform Init
-      run: terraform init
+    # - name: Terraform Init
+    #   run: terraform init
 
-    - name: Terraform Apply
-      run: terraform apply -auto-approve
+    # - name: Terraform Apply
+    #   run: terraform apply -auto-approve
 
     - name: Deploy to Azure
       uses: Azure/static-web-apps-deploy@v1
